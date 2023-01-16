@@ -22,7 +22,7 @@ As per the diagram above, generally flow works as follows:
 #  Setting Up and Running the Application
  
 1. **Prerequisite:** .Net 6.0
-2. Application can be run via the given RunApp.ps1 PowerShell script.
+2. Application can be run via the given RunApp.ps1 PowerShell script at the root location.
    It will run all the tests, and the application will start running on a local Kestrel server.
     [RunApp.ps1]
     ![RunApp.ps1](/Diagrams/RunApp-ps1.png)
@@ -38,10 +38,15 @@ As per the diagram above, generally flow works as follows:
 6. Large data set will be paged via configurable page sized (currently set to 50 records).
     [Paging]
     ![Paging](/Diagrams/AppSPagePaging.png)
+
+##  Running via Visual Studio (2022)
+1. After checking out the code make sure SalveApp.Clinics.Web is set as your startup project.
+    [Startup]
+     ![Startup](/Diagrams/Startup.png)
+
 ## Features
 1. Decorator pattern-based cache mechanism.
 2. Clear, separated by concerns of modular design.
- 
    [Modular Design]
    ![Modular Design](/Diagrams/ModDesign.png)
 3. Separated set of Integrations and Unite Tests suites, which tests the whole application inside out.
