@@ -46,14 +46,14 @@ As per the diagram above, generally flow works as follows:
    ![Modular Design](/Diagrams/ModDesign.png)
 3. Separated set of Integrations and Unite Tests suites, which tests the whole application inside out.
     [Tests suites]![Tests suites](/Diagrams/Tests.png) 
-4. Cache timing and data paging size could be configured via the given config file
-    [configs]![configs](/Diagrams/Configs.png) 
+4. Cache timing and data paging size could be configured via the given config file 
+    [configs] ![configs](/Diagrams/Configs.png) 
 ## Areas for improvements
-1. Test coverage is just a starting point, its not complete and comprehensive
-2. UI is basic and could improve with proper UX input.
-3. UI seems a bit flaky at times etc paging buttons playing up requires more thorough user testing 
-4. There are lots of simple assumptions that have been made about the size, volume, location and frequency etc of CSV data files. 
-5. In real-time implementation these assumptions will be clarified for a better and real-time robust design i.e processing the CSV files in the background and dumping the results into a database store
-6. Load, stress and performance testing in the production-like environment will help the application well in the production environment.
-7. There could be improvement with more logging, error handling, alert and monitoring, parallelism and cache etc and so on
-8. Peers code review and design discussions always yield better results.
+
+1. Test coverage is just a starting point, it's not complete and comprehensive.
+2. UI is basic and could improve with proper UX input, seems a bit flaky at times etc paging buttons playing up requires more thorough testing. 
+4. There are lots of simple assumptions that have been made about the size, volume, location and frequency etc of CSV data files and its handling. 
+5. In real-time implementation these assumptions will be clarified for a better and real-time robust design i.e processing the CSV files in a background service and dumping the results into a database store.
+6. Load, stress and performance testing in the production-like environment will significantly improve the application before going live.
+7. There could be improvement with more logging, error handling, alert and monitoring, parallelism and cache etc and so on.
+8. Peer code review and design discussions always yield better results.
