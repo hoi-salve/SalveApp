@@ -1,0 +1,35 @@
+﻿@page
+@model SalveApp.Clinics.Web.Pages.PageModels.IndexPageModel
+
+<div class="container">
+    <h1 class="mt-4 mb-3">
+        Select a clinic:
+    </h1>
+    <hr/>
+    @if (!string.IsNullOrEmpty(Model.Message))
+    {
+        <div class="alert alert-success">@Model.Message</div>
+    }
+
+    <div class="row">
+        <div class="col-md-8 mb-4">
+            <form asp-page="SearchPageModel" method="post" name="sentMessage" id="searchForm">
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label class="clinic-text">Clinic:</label>
+                        <select class="form-control" asp-items="ViewBag.ClinicData"
+                                asp-for="CurrentSelected" onchange="this.form.submit();">
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="patientscontainer" class="row">
+        <div class="col-md-8 mb-4">
+            <label class="clinic-text">Patients:</label>
+            <partial name="_ShowPatientsPartialView.cshtml" model="@Model"/>
+        </div>
+    </div>
+</div>

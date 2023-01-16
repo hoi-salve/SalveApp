@@ -1,0 +1,94 @@
+﻿body {
+    background-color: #F1EFEE !important;
+    padding-bottom: 0px;
+    padding-top: 54px;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.carousel-inner .item img[src$=".svg"] { width: 100%; }
+
+#qrCode { margin: 15px; }
+
+@media screen and (max-width: 767px) {
+    .carousel-caption { display: none; }
+}
+
+@media (min-width: 992px) {
+    body { padding-top: 56px; }
+}
+
+.carousel-caption {
+    background: black;
+    bottom: 0;
+    color: white;
+    left: 0;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+
+.portfolio-item { margin-bottom: 30px; }
+
+.card-image {
+    height: 250px;
+    width: 100%;
+}
+
+.bg-ground {
+    background-image: url("../images/ground.jpg");
+    background-size: cover;
+}
+
+.bg-bagel {
+    background-image: url("../images/bagel.jpg");
+    background-position-y: -75px;
+    background-size: cover;
+}
+
+.bg-table {
+    background-image: url("../images/table.jpg");
+    background-position-y: -110px;
+    background-size: cover;
+}
+
+.carousel-item {
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background: no-repeat center center scroll;
+    background-size: cover;
+    height: 65vh;
+    min-height: 300px;
+}
+
+.card-title a { color: #353A40; }
+
+.portfolio-item img {
+    max-height: 300px;
+    width: 100%;
+}
+
+.field-validation-error { color: red; }
+
+.contact-container { min-height: 500px; }
+
+.checked { color: orange; }
+
+.clinic-text {
+    color: lightslategrey;
+    font-size: 20px;
+    font-weight: bold;
+}

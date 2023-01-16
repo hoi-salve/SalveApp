@@ -1,0 +1,60 @@
+﻿@model SalveApp.Clinics.Web.Pages.PageModels.IndexPageModel
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort"
+               asp-route-currentFilter="@Model.CurrentFilter">
+                @Html.DisplayNameFor(model => model.Patients[0].LastName)
+            </a>
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Patients[0].FirstName)
+        </th>
+        <th>
+            <a asp-page="./Index" asp-route-sortOrder="@Model.DateOfBirthSort"
+               asp-route-currentFilter="@Model.CurrentFilter">
+                @Html.DisplayNameFor(model => model.Patients[0].DateOfBirth)
+            </a>
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.Patients)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfBirth)
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+@{
+    var prevDisabled = Model.Patients.HasPreviousPage ? "" : "disabled";
+    var nextDisabled = Model.Patients.HasNextPage ? "" : "disabled";
+}
+
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Patients.PageIndex - 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @prevDisabled">
+    Previous
+</a>
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Patients.PageIndex + 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @nextDisabled">
+    Next
+</a>

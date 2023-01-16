@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="AngleSharp" Version="0.14.0" />
+    <PackageReference Include="xunit.assert" Version="2.4.1" />
+    </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SalveApp.Clinics.Core\SalveApp.Clinics.Core.csproj" />
+  </ItemGroup>
+</Project>
